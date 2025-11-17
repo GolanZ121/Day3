@@ -1,6 +1,6 @@
 /*------------------------------------------------------
 * Filename: encryption.c
-* Description: 
+* Description: a program to reverse the steps of encryption
 * Author: Golan Ziv
 -------------------------------------------------------*/
 
@@ -9,6 +9,15 @@
 
 #define MSG_LENGTH 26
 
+/*------------------------------------------------------
+* Function Name - main 
+*
+* Function Purpose - decrypts an array of ints into array of chars
+*
+* Return Values - 0 for success
+*
+* Author - Golan Ziv
+-------------------------------------------------------*/
 int main(){
     int arr[MSG_LENGTH] = {921, 842, 884, 953, 834, 837, 914, 915, 936, 948, 864, 780, 542, 116, 928, 925, 372, 365, 911, 909, 937, 959, 945, 940, 891, 886};
     char ch_arr[MSG_LENGTH] = {'\0'};
@@ -23,4 +32,6 @@ int main(){
 
     for(int i = 0; i < MSG_LENGTH; i++)
         printf("%c", ch_arr[i]);
+
+    return 0;
 }
