@@ -49,10 +49,12 @@ int determine_array_order(int nums[SIZE], int length){
         }
         prev = nums[i];
     }
-    
-    for (int j = 0; j<MODES_AMNT; j++)
-        if(modes[j]) state = j; // if some mode is still true, we set the state to it.
-    
+
+    // if some mode is still true, we set the state to it.
+    if(modes[INC]) state = INC; 
+    if(modes[DEC]) state = DEC;
+    if(modes[CON]) state = CON;
+
     //  NOTE: Increasing and decreasing modes will never be true at the same time.
 
     /*  NOTE: There can be a situation where the constant mode is true and the increasing / decreasing is true
