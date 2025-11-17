@@ -10,7 +10,7 @@ void flip_array(int *arr, int length){
     int j;
     for(int i=0; i<length/2; i++){
         j = i + (length / 2);
-        arr[j] ^= arr[i];
+        arr[j] ^= arr[i]; // switch places with xor
         arr[i] ^= arr[j];
         arr[j] ^= arr[i];
     }
@@ -25,6 +25,7 @@ void decrease_by_prev(int *arr, int length){
 void rotate_array(int *arr, int length, int shift_amnt){
     int *temp_arr = malloc(length * sizeof(int)); 
 
+    // get the value to be from 0 to length-1
     shift_amnt = (shift_amnt % length) + length; 
     shift_amnt %= length;
 
