@@ -34,7 +34,7 @@ enum Mode {
 * Author - Golan Ziv
 -------------------------------------------------------*/
 int determine_array_order(int nums[SIZE], int length){
-    int modes[MODES_AMNT] = {1,1,1}; // set all to true, will change later.
+    int modes[MODES_AMNT] = {1, 1, 1}; // set all to true, will change later.
     int prev = nums[0], state = -1;
     // state starts of as messed up, if later we see its something else, it will change
     
@@ -116,11 +116,22 @@ int main() {
     int dec_arr[SIZE] = {120,116,114,63,50,7,-5,-18,-20,-21,-55,-60,-82,-92,-100};
     int con_arr[SIZE] = {17,17,17,17,17,17,17,17,17,17,17,17,17,17,17};
     int mess_arr[SIZE] = {1,2,3,4,120,6,7,8,9,10,11,-2200,13,14,15};
-
+    int user_arr[SIZE] = {0};
+    int curr;
     print_array_order(inc_arr, SIZE);
     print_array_order(dec_arr, SIZE);
     print_array_order(con_arr, SIZE);
     print_array_order(mess_arr, SIZE);
+    
+    
+    printf("Enter a sequence of 15 integers: ");
+    for(int i = 0; i < SIZE; i++){
+        scanf(" %d", &curr);
+        user_arr[i] = curr;
+    }
+
+    printf("\nResult for your array: ");
+    print_array_order(user_arr, SIZE);
 
     return 0;
 }
