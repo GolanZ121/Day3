@@ -9,7 +9,7 @@
 * Author: Golan Ziv
 -------------------------------------------------------*/
 #include <stdio.h>
-#define SIZE 4
+#define SIZE 15 // size of the arrays (given in question)
 
 /*------------------------------------------------------
 * Function Name - main 
