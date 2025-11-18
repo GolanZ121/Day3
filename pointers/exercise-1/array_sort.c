@@ -19,11 +19,18 @@
 int main(){
     int integers_arr[SIZE];
     int * pointers_arr[SIZE];
+    int scan_res;
 
     // read integers and fill pointers_arr with their addresses
     printf("Enter %d integers: ", SIZE);
     for(int i = 0; i < SIZE; i++){
-        scanf(" %d", &integers_arr[i]);
+        scan_res = scanf(" %d", &integers_arr[i]);
+
+        if(scan_res == 0){ // scanf failed, it didnt read anything (returned 0)
+            printf("bad input");
+            return 1;
+        }
+
         pointers_arr[i] = &integers_arr[i];
     }
 
