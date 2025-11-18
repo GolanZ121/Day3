@@ -20,8 +20,8 @@
 * Author - Golan Ziv
 -------------------------------------------------------*/
 int main(){
-    int * i_arr = malloc(sizeof(int)*SIZE);
-    char * c_arr = malloc(SIZE); // the size of char is 1
+    int i_arr[SIZE];
+    char c_arr[SIZE]; 
 
     printf("please enter %d integers: ", SIZE);
     for(int i = 0; i < SIZE; i++)
@@ -51,10 +51,6 @@ int main(){
     printf("\n\nprinting chars with '*' "); 
     for(int i = 0; i < SIZE; i++)
         printf("\nValue of char in index i=%d is: %c, Address: %p", i, *(c_arr + i), c_arr + i);
-    
-
-    free(i_arr);
-    free(c_arr);
 
     return 0;
 }
