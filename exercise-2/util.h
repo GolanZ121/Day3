@@ -6,7 +6,13 @@
 
 #include <string.h>
 #include <ctype.h>
-#define INPUT_LENGTH 15
+#define INPUT_LENGTH 13 
+/* largest and smallest ints both has 10 digits 
+   in order to also capture the sign '-' we need 11 bytes to store the number as string.
+   but fgets also inserts the newline character and of course a null terminator.
+   so we end up needing 13 bytes.
+*/
+
 #define ADDITION 36
 
 
